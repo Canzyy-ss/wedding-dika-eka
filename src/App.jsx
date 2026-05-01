@@ -1,18 +1,34 @@
 import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Hero from './components/Hero';
 import BrideGroom from './components/BrideGroom';
 import SaveTheDate from './components/SaveTheDate';
 import Details from './components/Details';
 import WeddingGift from './components/WeddingGift';
 import Gallery from './components/Gallery';
+import Cover from './components/Cover';
 
 function App() {
+  const [isOpened, setIsOpened] = useState(false);
+
+  useEffect(() => {
+    // Prevent scrolling behind the cover when it's closed
+    if (!isOpened) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  }, [isOpened]);
+
   return (
-    <div className="app-container">
-      <Hero />
-      <BrideGroom />
-      <SaveTheDate />
-      <Details />
+    <>
+      <Cover isOpened={isOpened} onOpen={() => setIsOpened(true)} />
+      
+      <div className="app-container">
+        <Hero />
+        <BrideGroom />
+        <SaveTheDate />
+        <Details />
       <WeddingGift />
       <Gallery />
       
