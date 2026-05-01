@@ -34,7 +34,7 @@ const Hero = () => {
           padding-bottom: 100px;
           text-align: center;
           /* Hero background image */
-          background-image: url('https://images.unsplash.com/photo-1583939003579-730e3918a45a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+          background-image: url('/undangan-pawiwahan.jpg');
           background-size: cover;
           background-position: center 20%;
           overflow: hidden;

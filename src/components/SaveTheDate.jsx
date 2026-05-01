@@ -70,21 +70,30 @@ const SaveTheDate = () => {
           max-width: 600px;
           margin: 0 auto;
           /* Background image as seen in screenshot */
-          background-image: url('https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
+          background-image: url('/pawiwahan2-bg.jpg');
           background-size: cover;
           background-position: center;
           border: 1px solid rgba(255, 255, 255, 0.7);
           padding: 10px;
         }
 
+        .frame-container::before {
+          content: '';
+          position: absolute;
+          top: 0; left: 0; right: 0; bottom: 0;
+          background: rgba(33, 27, 21, 0.85); /* Efek gelap seperti Pawiwahan */
+        }
+
         .frame-content {
+          position: relative;
+          z-index: 10;
           border: 1px solid rgba(255, 255, 255, 0.5);
           padding: 60px 20px 40px 20px;
           display: flex;
           flex-direction: column;
           align-items: center;
           text-align: center;
-          background: linear-gradient(to bottom, rgba(33, 27, 21, 0.4) 0%, rgba(33, 27, 21, 0.8) 100%);
+          background: transparent;
           min-height: 700px;
         }
 
