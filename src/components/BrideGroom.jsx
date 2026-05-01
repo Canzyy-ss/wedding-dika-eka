@@ -67,7 +67,7 @@ const BrideGroom = () => {
 
         .couple-grid {
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
           gap: 40px;
           max-width: 1000px;
           margin: 0 auto;
@@ -76,6 +76,7 @@ const BrideGroom = () => {
         .couple-card {
           display: flex;
           flex-direction: column;
+          width: 100%;
         }
 
         .card-image {
@@ -85,6 +86,7 @@ const BrideGroom = () => {
           background-position: center;
           /* Dark vignette overlay */
           box-shadow: inset 0 0 100px rgba(0,0,0,0.8);
+          border-radius: 4px;
         }
 
         .card-overlay {
@@ -94,6 +96,7 @@ const BrideGroom = () => {
           display: flex;
           align-items: flex-end;
           padding: 30px;
+          border-radius: 4px;
         }
 
         .card-info {
@@ -163,11 +166,20 @@ const BrideGroom = () => {
         }
 
         @media (max-width: 768px) {
+          .couple-grid {
+            grid-template-columns: 1fr;
+          }
           .card-image {
             height: 500px;
           }
           .card-title {
             font-size: 1.5rem;
+          }
+          .person-name {
+            font-size: 1.5rem;
+          }
+          .card-overlay {
+            padding: 20px;
           }
         }
       `}</style>

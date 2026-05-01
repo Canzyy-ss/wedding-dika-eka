@@ -27,21 +27,22 @@ const Gallery = () => {
       <style>{`
         .gallery-section {
           background-color: var(--bg-color);
+          padding: 60px 20px;
         }
 
         .gallery-grid {
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
           gap: 20px;
           margin-top: 50px;
         }
 
         .gallery-item {
           overflow: hidden;
-          border-radius: 8px;
+          border-radius: 4px;
           box-shadow: 0 4px 15px rgba(0,0,0,0.1);
           aspect-ratio: 1 / 1;
-          border: 4px solid #fff;
+          border: 2px solid rgba(255,255,255,0.1);
         }
 
         .gallery-item img {
@@ -52,7 +53,7 @@ const Gallery = () => {
         }
 
         .gallery-item:hover img {
-          transform: scale(1.1);
+          transform: scale(1.05);
         }
       `}</style>
     </section>
